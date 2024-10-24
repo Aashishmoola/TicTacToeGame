@@ -1,0 +1,130 @@
+:root {
+    font: 12px/1.5 sans-serif;
+    --boardLength: clamp(200px, 60vw + 100px, 400px);
+    --boardCol: 3;
+    --boardRow: 3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.header {
+    margin-top: 3vh;
+    font: small-caps 700 4rem sans-serif;
+}
+
+.gameScoreBoard {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #425579;
+    padding: 10px 15px;
+    border: solid white 2px;
+    border-radius: 8px;
+    width: clamp(min-content, 18vw, 300px);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+}
+
+.gameScoreBoard .headerText {
+    font: 700 small-caps 2rem sans-serif;
+    color: white;
+    align-self: center;
+}
+
+.gameScoreBoard .playerOne,
+.gameScoreBoard .playerTwo {
+    font: 500 1.5rem sans-serif;
+    background-color: #eeecec;
+    padding: 3px 10px;
+    border: solid white 1px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    min-width: min-content;
+    gap: 3px;
+}
+
+.gameScoreBoard .playerOne .playerScore {
+    color: red;
+}
+.gameScoreBoard .playerTwo .playerScore{
+    color: blue;
+}
+
+
+.messageCtn {
+    background: #425579;
+    height: clamp(90px, 20vh, 130px);
+    width: clamp(100px, 80vw, 900px);
+    padding: 20px;
+    border: solid white 2px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.messageCtn .message {
+    width: 100%;
+    height: 100%;
+    background: #eeecec;
+    border: solid white 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 2.2rem sans-serif;
+    color: black;
+}
+
+.gameBoard {
+    display: grid;
+    background: #eeecec;
+    height: var(--boardLength);
+    width: var(--boardLength);
+    border: solid #c07777 7px;
+    border-radius: 10px;
+    grid-template: repeat(var(--boardRow), 1fr) / repeat(var(--boardCol), 1fr);
+
+}
+
+.gameBoard .cell {
+    border: solid #c07777 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.gameBoard .btn {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    border: solid #3f0acf 1px;
+    border-radius: 5px;
+}
+
+.gameBoard .tokenCtn {
+    font: 700 small-caps clamp(30px, 10vh + 20px, 80px) sans-serif;
+}
+
+.startGameBtnCtn .startGameBtn,
+.playAgainBtnCtn .playAgainBtn {
+    padding: 5px 10px;
+    font: 700 small-caps 2.5rem sans-serif;
+    background-color: #425579;
+    color: white;
+    border: solid aliceblue 2px;
+    border-radius: 5px;
+}
