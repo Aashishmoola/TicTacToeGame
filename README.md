@@ -1,10 +1,10 @@
 OverView:
 
-  This is a very basic tic-tac-toe game that runs on the vanilla JS.
+  This is a very basic tic-tac-toe game that runs on the vanilla JS & CSS.
   
   Heavily relies on closures and class-like code structure to work.
   
-  Made to learn functional and logic based programming .
+  Made to learn functional and logic based programming.
 
 Support:
 
